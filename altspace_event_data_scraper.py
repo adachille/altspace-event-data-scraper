@@ -90,7 +90,7 @@ def capture_data():
 
 if __name__ == '__main__':
     base_url = "https://account.altvr.com"
-    save_dir = './'
+    save_dir = './result'
     # Run every 15 minutes
     start_time = time.time()
     delay_time = 900.0
