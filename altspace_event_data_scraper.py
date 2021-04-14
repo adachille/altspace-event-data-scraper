@@ -88,12 +88,13 @@ def capture_data():
     data_df.to_csv(save_dir + retrieval_time.strftime("%m-%d-%Y %H-%M-%S") + '.csv')
     print(f"c_time: {call_time} | r_time: {retrieval_time} | f_time: {datetime.now()}")
 
-if __name__ == 'main':
+if __name__ == '__main__':
     base_url = "https://account.altvr.com"
     save_dir = './'
     # Run every 15 minutes
     start_time = time.time()
     delay_time = 900.0
+    import pdb; pdb.set_trace()
     while True:
         capture_data()
         time.sleep(delay_time - ((time.time() - start_time) % delay_time))
